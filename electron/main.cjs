@@ -18,6 +18,7 @@ const dataRoot = path.join(projectRoot, ".data");
 const logPath = path.join(dataRoot, "electron.log");
 const appIcon = path.join(projectRoot, "img", "img.ico");
 const bootstrapScript = path.join(projectRoot, "scripts", "dsh.ps1");
+const childProcessPatch = path.join(__dirname, "hide-child-process.cjs");
 const dshCli = path.join(
   projectRoot,
   "node_modules",
@@ -349,6 +350,8 @@ async function startHarness() {
     process.execPath,
     [
       "--expose-internals",
+      "--require",
+      childProcessPatch,
       dshCli,
       "web",
       "--no-open",

@@ -20,6 +20,7 @@ target_link_libraries(deepseek-harness PRIVATE shell32)
 set_target_properties(deepseek-harness PROPERTIES
     OUTPUT_NAME "deepseek-harness"
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
+    WIN32_EXECUTABLE TRUE
 )
 
 if(MINGW)

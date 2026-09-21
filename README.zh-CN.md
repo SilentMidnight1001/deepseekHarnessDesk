@@ -29,6 +29,8 @@ Electron 44.4.3 内置 Node.js `24.21.0`，满足 Harness 的 Node.js 版本要�
 bin\deepseek-harness.exe
 ```
 
+`deepseek-harness.exe` 使用 Windows GUI 子系统，启动时不会显示额外控制台窗口。WinTools 辅助程序保留控制台子系统，便于安装脚本接收错误信息。
+
 首次冷启动会通过 `scripts\dsh.ps1 -InstallOnly` 准备依赖：
 
 1. 从 Node.js 官方地址下载便携 Node.js。

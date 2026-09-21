@@ -1,0 +1,22 @@
+{
+  "name": "deepseek-harness-local",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portable local DeepSeek Harness launcher",
+  "main": "electron/main.cjs",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh": "0.1.5-rc.2"
+  },
+  "scripts": {
+    "dsh": "node ./node_modules/@deepseek-ai/dsh/lib/bin.js",
+    "web": "node ./node_modules/@deepseek-ai/dsh/lib/bin.js web",
+    "electron": "electron .",
+    "desktop": "electron ."
+  },
+  "devDependencies": {
+    "electron": "44.4.3"
+  }
+}

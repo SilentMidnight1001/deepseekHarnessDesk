@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'unsafe-inline'; img-src data:;"
+    >
+    <title>DeepSeek Harness</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #101218;
+        color: #f4f6fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        background:
+          radial-gradient(circle at 50% 18%, rgba(62, 122, 255, 0.22), transparent 42%),
+          #101218;
+      }
+
+      main {
+        width: 100%;
+        padding: 34px;
+        text-align: center;
+      }
+
+      .mark {
+        display: grid;
+        width: 52px;
+        height: 52px;
+        margin: 0 auto 20px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 14px;
+        background: #171b26;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 650;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 10px 0 22px;
+        color: #9da6b8;
+        font-size: 13px;
+      }
+
+      .track {
+        overflow: hidden;
+        width: 240px;
+        height: 4px;
+        margin: 0 auto;
+        border-radius: 999px;
+        background: #262c39;
+      }
+
+      .track::after {
+        display: block;
+        width: 42%;
+        height: 100%;
+        border-radius: inherit;
+        background: #5f8cff;
+        content: "";
+        animation: slide 1.15s ease-in-out infinite;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(-110%);
+        }
+
+        to {
+          transform: translateX(340%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark">DS</div>
+      <h1>DeepSeek Harness</h1>
+      <p>正在启动本地服务...</p>
+      <div class="track"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.cache/
+.data/
+.runtime/
+build/
+node_modules/
+.env
+*.log
+*.lnk
+*.zip
